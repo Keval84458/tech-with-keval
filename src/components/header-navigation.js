@@ -1,24 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Box,
-  Flex,
-  HStack,
-  Button,
-  Spacer,
-  useColorModeValue,
-  useDisclosure,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  IconButton,
-  VStack,
-  Image,
-} from "@chakra-ui/react";
-import { HiOutlineViewList } from "react-icons/hi";
+import { Box, Flex, HStack, Button, Spacer, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { PAGE_PATH_KEYS } from "@/utils/constant";
 import Login from "@/app/_layouts/login";
@@ -26,8 +8,6 @@ import Signup from "@/app/_layouts/signup";
 import Logout from "@/app/_layouts/logout";
 import DrawerCMP from "./drawer";
 const HeaderNavigation = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <Box px={4} py={2} boxShadow="sm" bg="primary.42">
       <Flex alignItems="center">
@@ -43,30 +23,60 @@ const HeaderNavigation = () => {
           />
         </Box>
 
-        <HStack
-          as="nav"
-          spacing={6}
-          ml={10}
-          display={{ base: "none", md: "flex" }}
-        >
-          <Link
+        <HStack as="nav" ml={10} display={{ base: "none", md: "flex" }}>
+          <Button
+            bg="primary.42"
+            size="sm"
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+            as={Link}
             href={PAGE_PATH_KEYS.HOME}
-            _hover={{ textDecoration: "none", color: "teal.500" }}
           >
             Home
-          </Link>
-          <Link
+          </Button>
+
+          <Button
+            bg="primary.42"
+            size="sm"
             href={PAGE_PATH_KEYS.ABOUT_US}
-            _hover={{ textDecoration: "none", color: "teal.500" }}
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+            as={Link}
           >
             About Us
-          </Link>
-          <Link
+          </Button>
+
+          <Button
+            bg="primary.42"
+            size="sm"
             href={PAGE_PATH_KEYS.CONTACT_US}
-            _hover={{ textDecoration: "none", color: "teal.500" }}
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+            as={Link}
           >
             Contact Us
-          </Link>
+          </Button>
         </HStack>
 
         <Spacer />
