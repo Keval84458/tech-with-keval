@@ -7,6 +7,7 @@ import Login from "@/app/_layouts/login";
 import Signup from "@/app/_layouts/signup";
 import Logout from "@/app/_layouts/logout";
 import DrawerCMP from "./drawer";
+
 const HeaderNavigation = () => {
   return (
     <Box px={4} py={2} boxShadow="sm" bg="primary.42">
@@ -27,6 +28,8 @@ const HeaderNavigation = () => {
           <Button
             bg="primary.42"
             size="sm"
+            as={Link}
+            href={PAGE_PATH_KEYS.HOME}
             _hover={{
               bg: "primary.42",
               transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
@@ -36,15 +39,31 @@ const HeaderNavigation = () => {
               borderTopColor: "primary.100",
             }}
             _disabled={{ bg: "primary.42" }}
-            as={Link}
-            href={PAGE_PATH_KEYS.HOME}
           >
             Home
+          </Button>
+          <Button
+            bg="primary.42"
+            size="sm"
+            as={Link}
+            href={PAGE_PATH_KEYS.TUTORIALS}
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+          >
+            Tutorials
           </Button>
 
           <Button
             bg="primary.42"
             size="sm"
+            as={Link}
             href={PAGE_PATH_KEYS.ABOUT_US}
             _hover={{
               bg: "primary.42",
@@ -55,7 +74,6 @@ const HeaderNavigation = () => {
               borderTopColor: "primary.100",
             }}
             _disabled={{ bg: "primary.42" }}
-            as={Link}
           >
             About Us
           </Button>
@@ -63,6 +81,7 @@ const HeaderNavigation = () => {
           <Button
             bg="primary.42"
             size="sm"
+            as={Link}
             href={PAGE_PATH_KEYS.CONTACT_US}
             _hover={{
               bg: "primary.42",
@@ -73,7 +92,6 @@ const HeaderNavigation = () => {
               borderTopColor: "primary.100",
             }}
             _disabled={{ bg: "primary.42" }}
-            as={Link}
           >
             Contact Us
           </Button>
