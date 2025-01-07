@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import {
   ModalOverlay,
@@ -14,6 +13,7 @@ import {
   useDisclosure,
   InputRightElement,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import { EyeIcon, ThemeInput } from "@/components";
 import * as api from "../../services/server-apis";
@@ -24,6 +24,7 @@ const Login = () => {
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [viewPass, setViewPass] = useState(false);
+  const toast = useToast();
   const [formData, setFormData] = useState({
     identity: "",
     password: "",
@@ -40,7 +41,7 @@ const Login = () => {
       const response = await api.login(payload);
       console.log("response", response);
       if (response === undefined) {
-        // onClose();
+        onClose();
         Swal.fire({
           title: "Failed",
           icon: "error",
@@ -50,10 +51,16 @@ const Login = () => {
       } else {
         localStorage.setItem("authenticated", response.token);
         onClose();
-        Swal.fire({
-          title: "Success",
-          icon: "success",
-          text: "Login successfully",
+        // Swal.fire({
+        //   title: "Success",
+        //   icon: "success",
+        //   text: "Login successfully",
+        // });
+        toast({
+          title: "You’ve successfully logged in!",
+          position: "top-right",
+          status: "success",
+          isClosable: true,
         });
         setFormData({ identity: "", password: "" });
         router.refresh();

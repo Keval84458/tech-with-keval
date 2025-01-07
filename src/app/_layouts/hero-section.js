@@ -29,7 +29,7 @@ const HeroSection = () => {
         <Text
           color="white.100"
           textAlign="center"
-          fontSize="350"
+          fontSize="300"
           fontFamily="heading"
           fontWeight="bold"
         >

@@ -1,14 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Button } from "@chakra-ui/react";
-import { PAGE_PATH_KEYS } from "@/utils/constant";
+import React from "react";
+import { Button, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 const Logout = () => {
   const router = useRouter();
+  const toast = useToast();
   const logout = () => {
     localStorage.removeItem("authenticated");
+    toast({
+      title: "You’ve successfully logged out.",
+      position: "top-right",
+      status: "success",
+      isClosable: true,
+    });
     router.refresh();
   };
 
