@@ -1,11 +1,17 @@
-// import { MotionBox } from "./motion";
 import { Input, Box } from "@chakra-ui/react";
 
-// export const PageWrapper = ({ children, ...rest }) => (
-//   <MotionBox w="100%" h="100%" overflowX="hidden" overflowY="auto" {...rest}>
-//     {children}
-//   </MotionBox>
-// );
+export const PageWrapper = ({ children, ...rest }) => (
+  <Box
+    w="100%"
+    overflowX="hidden"
+    overflowY="auto"
+    p=".7rem"
+    mb="1rem"
+    {...rest}
+  >
+    {children}
+  </Box>
+);
 
 export const ThemeInput = ({ ...rest }) => (
   <Input size="md" fontSize="md" focusBorderColor="primary.100" {...rest} />

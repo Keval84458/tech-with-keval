@@ -26,3 +26,14 @@ export const login = async (payload) => {
     console.log("err", err);
   }
 };
+
+export const getTutorials = async () => {
+  try {
+    const response = await axios.get(
+      "http://127.0.0.1:8090/api/collections/Tutorials/records"
+    );
+    return response.data;
+  } catch (err) {
+    console.log("err", err);
+  }
+};
