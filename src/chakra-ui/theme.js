@@ -143,6 +143,7 @@ const theme = extendTheme({
     yellow: {
       warning: "#ffc107",
       spark: "#f8e71c",
+      not: "#FDC604",
     },
     blue: {
       spark: "#26f1f8",

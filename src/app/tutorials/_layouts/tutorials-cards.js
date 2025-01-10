@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { Box, SimpleGrid } from "@chakra-ui/react";
-import TutorialCard from "@/components/tutorial-card";
-
+import TutorialCard from "./card";
 const TutorialCards = ({ tutorials }) => {
   return (
     <>
