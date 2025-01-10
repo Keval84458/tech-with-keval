@@ -1,5 +1,6 @@
 import { PAGE_PATH_KEYS } from "@/utils/constant";
 import {
+  Box,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -7,12 +8,14 @@ import {
   DrawerHeader,
   DrawerOverlay,
   IconButton,
+  Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { HiOutlineViewList } from "react-icons/hi";
+import { Icon } from ".";
 
 const DrawerCMP = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,7 +31,7 @@ const DrawerCMP = () => {
         onClick={onOpen}
       />
 
-      <Drawer isOpen={isOpen} onClose={onClose} placement="left" width="50%">
+      <Drawer isOpen={isOpen} onClose={onClose} placement="left">
         <DrawerOverlay />
         <DrawerContent bg="white.100" transition="all 0.2s ease">
           <DrawerCloseButton />
@@ -38,24 +41,39 @@ const DrawerCMP = () => {
             <VStack direction="column" spacing={4}>
               <Link
                 href={PAGE_PATH_KEYS.HOME}
-                _hover={{ textDecoration: "none", color: "teal.500" }}
+                _hover={{ textDecoration: "none" }}
                 onClick={onClose}
               >
                 Home
               </Link>
+
+              <Link
+                href={PAGE_PATH_KEYS.TUTORIALS}
+                _hover={{ textDecoration: "none" }}
+                onClick={onClose}
+              >
+                Tutorials
+              </Link>
               <Link
                 href={PAGE_PATH_KEYS.ABOUT_US}
-                _hover={{ textDecoration: "none", color: "teal.500" }}
+                _hover={{ textDecoration: "none" }}
                 onClick={onClose}
               >
                 About Us
               </Link>
               <Link
                 href={PAGE_PATH_KEYS.CONTACT_US}
-                _hover={{ textDecoration: "none", color: "teal.500" }}
+                _hover={{ textDecoration: "none" }}
                 onClick={onClose}
               >
                 Contact Us
+              </Link>
+              <Link
+                href={PAGE_PATH_KEYS.FEEDBACK}
+                _hover={{ textDecoration: "none" }}
+                onClick={onClose}
+              >
+                Feedback
               </Link>
             </VStack>
           </DrawerBody>

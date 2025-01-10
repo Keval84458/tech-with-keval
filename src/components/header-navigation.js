@@ -75,7 +75,7 @@ const HeaderNavigation = () => {
             }}
             _disabled={{ bg: "primary.42" }}
           >
-            About Us
+            About Me
           </Button>
 
           <Button
@@ -94,6 +94,24 @@ const HeaderNavigation = () => {
             _disabled={{ bg: "primary.42" }}
           >
             Contact Us
+          </Button>
+
+          <Button
+            bg="primary.42"
+            size="sm"
+            as={Link}
+            href={PAGE_PATH_KEYS.FEEDBACK}
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+          >
+            Feedback
           </Button>
         </HStack>
 

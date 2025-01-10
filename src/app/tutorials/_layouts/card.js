@@ -11,11 +11,10 @@ const TutorialCard = ({ tutorial }) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
     return date.toLocaleDateString("en-US", options);
   };
-  // console.log("tutorial", tutorial.id);
 
   return (
     <>
-      <Link href={PAGE_PATH_KEYS.SEARCH_TUTORIAL}>
+      <Link href={PAGE_PATH_KEYS.SEARCH_TUTORIAL + `?Id=${tutorial.id}`}>
         <Card
           _hover={{
             boxShadow: "2xl",

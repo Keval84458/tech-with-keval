@@ -1,4 +1,4 @@
-import { Input, Box } from "@chakra-ui/react";
+import { Input, Box, Select, Textarea } from "@chakra-ui/react";
 
 export const PageWrapper = ({ children, ...rest }) => (
   <Box w="100%" overflowX="hidden" overflowY="auto" p=".7rem" {...rest}>
@@ -7,8 +7,18 @@ export const PageWrapper = ({ children, ...rest }) => (
 );
 
 export const ThemeInput = ({ ...rest }) => (
-  <Input size="md" fontSize="md" focusBorderColor="primary.100" {...rest} />
+  <Input size="md" fontSize="md" {...rest} />
 );
+
+export const ThemeSelect = ({ children, ...rest }) => (
+  <Select fontSize="md" {...rest}>
+    {children}
+  </Select>
+);
+
+export const ThemeTextarea = ({ ...rest }) => {
+  return <Textarea fontSize="md" {...rest} size="sm" />;
+};
 
 export const EyeIcon = ({ visible, setVisible, size = "1.5rem", ...rest }) => {
   return (
