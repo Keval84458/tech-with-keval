@@ -4,10 +4,8 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 import { ThemeInput } from "@/components";
 import SearchCard from "./card";
 import NotLogin from "@/components/not-login";
-import UnderConstruction from "@/components/under-construction";
-import NotFound from "@/components/not-found";
 
-const SearchConcept = () => {
+const SearchConcept = ({ blogsData }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const searchConcept = (e) => {
@@ -33,7 +31,9 @@ const SearchConcept = () => {
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
           >
-            <SearchCard />
+            {blogsData.items.map((blogs) => {
+              return <SearchCard key={blogs.id} blogs={blogs} />;
+            })}
           </SimpleGrid>
         ) : (
           <NotLogin />

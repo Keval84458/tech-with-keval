@@ -1,5 +1,5 @@
 "use client";
-import NotLogin from "@/components/not-login";
+import { PAGE_PATH_KEYS } from "@/utils/constant";
 import {
   Button,
   Card,
@@ -9,9 +9,10 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
-const SearchCard = () => {
+const SearchCard = ({ blogs }) => {
   return (
     <>
       <Card
@@ -25,13 +26,15 @@ const SearchCard = () => {
         }}
       >
         <CardHeader>
-          <Heading size="md"> Customer dashboard</Heading>
+          <Heading size="md">{blogs.Point_Name}</Heading>
         </CardHeader>
         <CardBody>
-          <Text>View a summary of all your customers over the last month.</Text>
+          <Text>{blogs.Summury}</Text>
         </CardBody>
         <CardFooter>
           <Button
+            as={Link}
+            href={PAGE_PATH_KEYS.DETAILS_TUTORIAL + `?Id=${blogs.id}`}
             bg="primary.100"
             _hover={{ bg: "primary.100" }}
             _disabled={{ bg: "primary.100" }}
