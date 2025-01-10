@@ -39,14 +39,6 @@ const HeaderNavigation = () => {
               borderTopColor: "primary.100",
             }}
             _disabled={{ bg: "primary.42" }}
-            _active={{
-              bg: "primary.42",
-              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
-              borderBottomWidth: "3px",
-              borderBottomColor: "primary.30",
-              borderTopWidth: "3px",
-              borderTopColor: "primary.100",
-            }}
           >
             Home
           </Button>

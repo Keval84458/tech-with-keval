@@ -1,14 +1,7 @@
 import { Input, Box } from "@chakra-ui/react";
 
 export const PageWrapper = ({ children, ...rest }) => (
-  <Box
-    w="100%"
-    overflowX="hidden"
-    overflowY="auto"
-    p=".7rem"
-    mb="1rem"
-    {...rest}
-  >
+  <Box w="100%" overflowX="hidden" overflowY="auto" p=".7rem" {...rest}>
     {children}
   </Box>
 );
