@@ -1,10 +1,13 @@
-import { Box, Button, Image } from "@chakra-ui/react";
+"use client";
 import React from "react";
-import { Icon } from ".";
+import { Box, Button, Image } from "@chakra-ui/react";
+import { Icon } from "@/components";
+import Link from "next/link";
+import { PAGE_PATH_KEYS } from "@/utils/constant";
 
 const NotFound = () => {
   return (
-    <Box>
+    <Box mt="5rem">
       <Image
         src="/assets/vectore/NotFound.png"
         alt="Construction-Image"
@@ -13,7 +16,15 @@ const NotFound = () => {
         mx="auto"
       />
       <Box display="flex" justifyContent="center">
-        <Button size="md" px="2rem" bg="yellow.not">
+        <Button
+          as={Link}
+          href={PAGE_PATH_KEYS.HOME}
+          size="md"
+          px="2rem"
+          bg="yellow.not"
+          _hover={{ bg: "yellow.not" }}
+          _disabled={{ bg: "yellow.not" }}
+        >
           <Icon name="FaArrowLeft" type="fa" size="1rem" mx=".5rem" />
           Go Back
         </Button>
