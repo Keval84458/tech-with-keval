@@ -5,7 +5,7 @@ import Details from "./details";
 
 const About = () => {
   return (
-    <Box display={{ md: "flex" }}>
+    <Box display={{ md: "flex" }} mt={4} gap={{ md: 2 }}>
       <Box w={{ md: "40%" }} rounded="full">
         <Image
           src="/assets/about/About.JPG"
@@ -14,12 +14,12 @@ const About = () => {
           h="500px"
           roundedTopRight="7rem"
           roundedBottomLeft="7rem"
+          transition="all 0.5s ease"
           _hover={{
             roundedTopRight: "0",
             roundedBottomLeft: "0",
             roundedTopLeft: "7rem",
             roundedBottomRight: "7rem",
-            transition: "all .7s ease",
           }}
           mx="auto"
         />

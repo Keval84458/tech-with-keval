@@ -1,16 +1,15 @@
 "use client";
 import React from "react";
-import { Box, Button, Image, Text } from "@chakra-ui/react";
-import { Icon } from ".";
+import { Box, Image, Text } from "@chakra-ui/react";
 
-const NotLogin = () => {
+const EmptyData = () => {
   return (
     <Box>
       <Image
-        src="/assets/vectore/NotLogin.png"
+        src="/assets/vectore/noData.png"
         alt="Construction-Image"
         width="500px"
-        height={{ base: "400px", md: "450px" }}
+        height={{ base: "400px", md: "370px" }}
         mx="auto"
       />
       <Text
@@ -19,10 +18,10 @@ const NotLogin = () => {
         fontWeight="bold"
         fontFamily="heading"
       >
-        YOU ARE NOT LOGGED IN
+        NO DATA FOUND
       </Text>
     </Box>
   );
 };
 
-export default NotLogin;
+export default EmptyData;

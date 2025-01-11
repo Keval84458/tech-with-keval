@@ -1,7 +1,14 @@
 import { Input, Box, Select, Textarea } from "@chakra-ui/react";
 
 export const PageWrapper = ({ children, ...rest }) => (
-  <Box w="100%" overflowX="hidden" overflowY="auto" p=".7rem" {...rest}>
+  <Box
+    w="100%"
+    overflowX="hidden"
+    overflowY="auto"
+    p=".7rem"
+    mt="4rem"
+    {...rest}
+  >
     {children}
   </Box>
 );

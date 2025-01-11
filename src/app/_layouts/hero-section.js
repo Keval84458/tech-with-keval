@@ -2,19 +2,22 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import TypewriterCmp from "@/components/typewriter";
 
 const HeroSection = () => {
   return (
     <>
       <Box
-        bgImage="/assets/background/site-bg.jpg"
+        bgImage="/assets/background/bg1.jpg"
         bgSize="cover"
         bgRepeat="no-repeat"
         w="100%"
         overflowY="hidden"
+        mt={{ base: "4.4rem", md: "4.8rem" }}
+        h={{ base: "600px", md: "490px" }}
       >
         <Box
-          my={{ base: "10rem", md: 0 }}
+          my={{ base: "13rem", md: 0 }}
           py={{ md: "5rem" }}
           transition="all .5s ease"
         >
@@ -45,14 +48,23 @@ const HeroSection = () => {
             color="primary.300"
             fontWeight="bold"
           >
-            <Typewriter
+            <TypewriterCmp
               options={{
                 strings: [
                   "React Js",
                   "Next Js",
+                  "MUI",
                   "Chakra UI",
+                  "React Bootstrap",
+                  "Bootstrap",
+                  "Reactstrap",
+                  "HTML",
+                  "CSS",
+                  "Javascript",
                   "Pocketbase",
                   "Strapi",
+                  "Validations",
+                  "Other",
                 ],
                 loop: true,
                 autoStart: true,

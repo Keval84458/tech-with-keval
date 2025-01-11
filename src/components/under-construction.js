@@ -17,7 +17,7 @@ const UnderConstruction = () => {
         fontWeight="bold"
         fontFamily="heading"
       >
-        Under Construction
+        UNDER CONSTRUCTION
       </Text>
     </Box>
   );

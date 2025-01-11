@@ -5,9 +5,9 @@ import Link from "next/link";
 import { PAGE_PATH_KEYS } from "@/utils/constant";
 import { Icon } from ".";
 
-const Footer = () => {
+const Footer = ({ ...rest }) => {
   return (
-    <Box bg="gray.800" color="white" py={6}>
+    <Box bg="primary.42" color="black.100" py={5} {...rest}>
       <Flex
         direction={{ base: "column", md: "row" }}
         justify="space-between"
@@ -19,74 +19,28 @@ const Footer = () => {
         </Text>
 
         <Stack
-          direction={{ base: "column", md: "row" }}
-          // spacing={4}
-          align="center"
-          mt={{ base: 4, md: 0 }}
-        >
-          <Button
-            as={Link}
-            href={PAGE_PATH_KEYS.HOME}
-            rounded="md"
-            size="sm"
-            _hover={{
-              bg: "gray.800",
-            }}
-            _disabled={{ bg: "primary.100" }}
-            bg="gray.800"
-            color="white.100"
-          >
-            Home
-          </Button>
-
-          <Button
-            as={Link}
-            href={PAGE_PATH_KEYS.ABOUT_US}
-            size="sm"
-            rounded="md"
-            _hover={{
-              bg: "gray.800",
-            }}
-            _disabled={{ bg: "primary.100" }}
-            bg="gray.800"
-            color="white.100"
-          >
-            About Us
-          </Button>
-
-          <Button
-            as={Link}
-            href={PAGE_PATH_KEYS.CONTACT_US}
-            rounded="md"
-            size="sm"
-            _hover={{
-              bg: "gray.800",
-            }}
-            _disabled={{ bg: "primary.100" }}
-            bg="gray.800"
-            color="white.100"
-          >
-            Contact Us
-          </Button>
-        </Stack>
-
-        <Stack
           direction="row"
-          spacing={4}
+          spacing={2}
           mt={{ base: 4, md: 0 }}
           align="center"
         >
-          <Link href="https://twitter.com" isExternal>
+          <Link href="https://www.youtube.com/@techwithkeval2211">
+            <Icon name="FaYoutube" type="fa" color="red.dc35" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/keval-makvana-a164ba281/">
+            <Icon name="FaLinkedin" type="fa" color="primary.900" />
+          </Link>
+          <Link href="https://www.instagram.com/keval.makvana.161/">
+            <Icon name="FaInstagram" type="fa" />
+          </Link>
+          <Link href="#">
             <Icon name="FaSquareXTwitter" type="fa6" />
           </Link>
-          <Link href="https://facebook.com" isExternal>
-            <Icon name="FaFacebook" type="fa" />
+          <Link href="https://www.facebook.com/keval.makvana.161">
+            <Icon name="FaFacebook" type="fa" color="primary.900" />
           </Link>
-          <Link href="https://instagram.com" isExternal>
-            <Icon name="FaInstagramSquare" type="fa" />
-          </Link>
-          <Link href="https://instagram.com" isExternal>
-            <Icon name="IoLogoYoutube" type="io" />
+          <Link href="https://github.com/Keval84458">
+            <Icon name="FaGithub" type="fa" color="black.100" />
           </Link>
         </Stack>
       </Flex>

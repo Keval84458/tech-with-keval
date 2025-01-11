@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { Box, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Text, Tooltip } from "@chakra-ui/react";
 import { Icon } from "@/components";
 const Details = () => {
   return (
     <Box>
-      <Text fontSize="300" fontWeight="extrabold">
+      <Text fontSize={{ base: "275", md: "300" }} fontWeight="extrabold">
         Tech with Keval
       </Text>
       <Text color="black.100" fontWeight="semibold">
@@ -47,22 +47,31 @@ const Details = () => {
         <Text color="black.100" fontWeight="bold">
           Follow and Subscribe me on social media:
         </Text>
-        <Box display="flex" gap={2}>
+        <Box
+          display="flex"
+          gap={2}
+          justifyContent={{ base: "center", md: "start" }}
+        >
           <Link href="https://www.youtube.com/@techwithkeval2211">
             <Icon name="FaYoutube" type="fa" color="red.dc35" />
           </Link>
+
           <Link href="https://www.linkedin.com/in/keval-makvana-a164ba281/">
             <Icon name="FaLinkedin" type="fa" color="primary.900" />
           </Link>
-          <Link href="https://www.instagram.com/keval.makvana.161/">
+
+          <Link href="https://www.instagram.com/techwithkeval2211/">
             <Icon name="FaInstagram" type="fa" />
           </Link>
+
           <Link href="#">
             <Icon name="FaSquareXTwitter" type="fa6" />
           </Link>
+
           <Link href="https://www.facebook.com/keval.makvana.161">
             <Icon name="FaFacebook" type="fa" color="primary.900" />
           </Link>
+
           <Link href="https://github.com/Keval84458">
             <Icon name="FaGithub" type="fa" color="black.100" />
           </Link>
