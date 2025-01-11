@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Footer />
+      <Footer left={0} bottom={0} position="fixed" w="100%" />
     </>
   );
 }

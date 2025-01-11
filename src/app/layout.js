@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ChakraProvider from "@/chakra-ui/chakra-provider";
 import HeaderNavigation from "@/components/header-navigation";
-import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

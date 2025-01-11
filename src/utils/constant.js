@@ -6,4 +6,5 @@ export const PAGE_PATH_KEYS = {
   SEARCH_TUTORIAL: "/search-tutorial",
   FEEDBACK: "/feedback",
   DETAILS_TUTORIAL: "/detail-tutorial",
+  BLOGS: "/blogs",
 };

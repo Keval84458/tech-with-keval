@@ -10,7 +10,17 @@ import DrawerCMP from "./drawer";
 
 const HeaderNavigation = () => {
   return (
-    <Box px={4} py={2} boxShadow="sm" bg="primary.42">
+    <Box
+      px={4}
+      py={2}
+      boxShadow="sm"
+      bg="primary.42"
+      position="fixed"
+      top={0}
+      left={0}
+      w="100%"
+      zIndex="1000"
+    >
       <Flex alignItems="center">
         <DrawerCMP />
         <Box fontWeight="bold" fontSize="xl">
@@ -21,6 +31,12 @@ const HeaderNavigation = () => {
             transition="all 0.5s ease"
             roundedBottomLeft="2xl"
             roundedTopRight="2xl"
+            _hover={{
+              roundedBottomLeft: "0",
+              roundedTopRight: "0",
+              roundedTopLeft: "2xl",
+              roundedBottomRight: "2xl",
+            }}
           />
         </Box>
 
@@ -42,6 +58,7 @@ const HeaderNavigation = () => {
           >
             Home
           </Button>
+
           <Button
             bg="primary.42"
             size="sm"
@@ -58,6 +75,24 @@ const HeaderNavigation = () => {
             _disabled={{ bg: "primary.42" }}
           >
             Tutorials
+          </Button>
+
+          <Button
+            bg="primary.42"
+            size="sm"
+            as={Link}
+            href={PAGE_PATH_KEYS.BLOGS}
+            _hover={{
+              bg: "primary.42",
+              transition: "all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+              borderBottomWidth: "3px",
+              borderBottomColor: "primary.30",
+              borderTopWidth: "3px",
+              borderTopColor: "primary.100",
+            }}
+            _disabled={{ bg: "primary.42" }}
+          >
+            Blogs
           </Button>
 
           <Button

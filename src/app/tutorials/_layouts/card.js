@@ -16,12 +16,13 @@ const TutorialCard = ({ tutorial }) => {
     <>
       <Link href={PAGE_PATH_KEYS.SEARCH_TUTORIAL + `?Id=${tutorial.id}`}>
         <Card
+          border="2px"
+          borderColor="white.100"
           _hover={{
             boxShadow: "2xl",
-            border: "1px",
             borderColor: "primary.100",
+            transition: "all .7s ease",
           }}
-          // height="18rem"
         >
           <CardBody>
             <Image

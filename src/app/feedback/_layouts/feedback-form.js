@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ThemeInput, ThemeSelect, ThemeTextarea } from "@/components";
+import { Icon, ThemeInput, ThemeSelect, ThemeTextarea } from "@/components";
 import NotLogin from "@/components/not-login";
 import {
   Box,
@@ -9,6 +9,7 @@ import {
   InputGroup,
   Text,
   Image,
+  InputLeftElement,
 } from "@chakra-ui/react";
 import * as api from "../../../services/server-apis";
 import Swal from "sweetalert2";
@@ -90,12 +91,20 @@ const FeedbackForm = () => {
             </Text>
 
             <InputGroup w={{ lg: "80%" }}>
+              <InputLeftElement>
+                <Icon
+                  name="MdOutlineDriveFileRenameOutline"
+                  type="md"
+                  size="1.5rem"
+                />
+              </InputLeftElement>
               <FormControl>
                 <ThemeInput
                   size="md"
-                  color="black.37"
+                  pl="2.5rem"
+                  color="black.100"
                   placeholder="Name"
-                  _placeholder={{ color: "black.37" }}
+                  _placeholder={{ color: "black.100" }}
                   focusBorderColor="primary.43"
                   value={feedbackData.Name}
                   onChange={(e) => onChange("Name", e.target.value)}
@@ -104,12 +113,16 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="FaUserAlt" type="fa" size="1.1rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeInput
                   size="md"
-                  color="black.37"
+                  pl="2.5rem"
+                  color="black.100"
                   placeholder="Email"
-                  _placeholder={{ color: "black.37" }}
+                  _placeholder={{ color: "black.100" }}
                   focusBorderColor="primary.43"
                   value={feedbackData.Email}
                   onChange={(e) => onChange("Email", e.target.value)}
@@ -118,10 +131,14 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="FaStar" type="fa" size="1.2rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeSelect
+                  pl="2.5rem"
                   placeholder="Ratings"
-                  color="black.37"
+                  color="black.100"
                   focusBorderColor="primary.43"
                   value={feedbackData.Ratings}
                   onChange={(e) => onChange("Ratings", e.target.value)}
@@ -136,10 +153,14 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="FcFeedback" type="fc" size="1.5rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeSelect
+                  pl="2.5rem"
                   placeholder="Feedback Type"
-                  color="black.37"
+                  color="black.100"
                   focusBorderColor="primary.43"
                   value={feedbackData.Feedback_Type}
                   onChange={(e) => onChange("Feedback_Type", e.target.value)}
@@ -163,13 +184,17 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="FaComment" type="fa" size="1.2rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeTextarea
                   size="xl"
-                  color="black.37"
+                  pl="2.5rem"
+                  color="black.100"
                   placeholder="Comments..."
                   focusBorderColor="primary.43"
-                  _placeholder={{ color: "black.37" }}
+                  _placeholder={{ color: "black.100" }}
                   value={feedbackData.Comments}
                   onChange={(e) => onChange("Comments", e.target.value)}
                 />
@@ -177,13 +202,17 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="MdSettingsSuggest" type="md" size="1.2rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeTextarea
                   size="xl"
-                  color="black.37"
+                  color="black.100"
+                  pl="2.2rem"
                   placeholder="Suggestions for Improvement..."
                   focusBorderColor="primary.43"
-                  _placeholder={{ color: "black.37" }}
+                  _placeholder={{ color: "black.100" }}
                   value={feedbackData.Suggestions}
                   onChange={(e) => onChange("Suggestions", e.target.value)}
                 />
@@ -191,12 +220,16 @@ const FeedbackForm = () => {
             </InputGroup>
 
             <InputGroup w={{ lg: "80%" }} mt={2}>
+              <InputLeftElement>
+                <Icon name="FaMapMarkerAlt" type="fa" size="1.1rem" />
+              </InputLeftElement>
               <FormControl>
                 <ThemeInput
                   size="md"
-                  color="black.37"
+                  pl="2.2rem"
+                  color="black.100"
                   placeholder="Location"
-                  _placeholder={{ color: "black.37" }}
+                  _placeholder={{ color: "black.100" }}
                   focusBorderColor="primary.43"
                   value={feedbackData.Locations}
                   onChange={(e) => onChange("Locations", e.target.value)}
