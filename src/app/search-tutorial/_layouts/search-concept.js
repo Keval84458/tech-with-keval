@@ -19,20 +19,20 @@ const SearchConcept = ({ blogsData }) => {
         width={{ base: "100%", sm: "70%", md: "50%", lg: "30%" }}
         transition="all .5s ease"
       >
-        <ThemeInput
+        {/* <ThemeInput
           placeholder="Search"
           value={searchQuery}
           onChange={(e) => searchConcept(e)}
-        />
+        /> */}
       </Box>
       <Box mt={4}>
         {localStorage.getItem("authenticated") ? (
           <>
             {blogsData.items.length > 0 ? (
               <SimpleGrid
-                column={{ base: 1, sm: 2, md: 4, lg: 6 }}
+                column={{ base: 1, sm: 2, md: 4, lg: 5 }}
                 spacing={4}
-                templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+                templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
               >
                 {blogsData.items.map((blogs) => {
                   return (

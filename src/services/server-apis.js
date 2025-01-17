@@ -74,3 +74,15 @@ export const getBlogDetailsbyBlogId = async (blogId) => {
     console.log("err", err);
   }
 };
+
+export const searchBlogsByName = async () => {
+  try {
+    const response = await axios.get(
+      `http://127.0.0.1:8090/api/collections/Blogs/records?filter=(Point_Name~'n')`
+    );
+    console.log("response", response.data);
+    return response.data;
+  } catch (err) {
+    console.log("err", err);
+  }
+};
