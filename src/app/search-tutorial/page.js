@@ -6,6 +6,7 @@ import * as api from "../../services/server-apis";
 const SearchTutorial = async ({ searchParams }) => {
   const tutorialId = searchParams.Id;
   const blogsData = await api.getBlogByTutorialId(tutorialId);
+
   return (
     <PageWrapper>
       <SearchConcept blogsData={blogsData} />
